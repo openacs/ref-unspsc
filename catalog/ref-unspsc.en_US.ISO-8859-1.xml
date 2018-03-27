@@ -2925,7 +2925,7 @@
 <msg key="101429">Motor vehicles</msg>
 <msg key="101430">Passenger motor vehicles</msg>
 <msg key="101431">Minibuses</msg>
-<msg key="101432">Busses</msg>
+<msg key="101432">Buses</msg>
 <msg key="101433">Automobiles or cars</msg>
 <msg key="101434">Station wagons</msg>
 <msg key="101435">Minivans or vans</msg>
@@ -15759,7 +15759,7 @@
 <msg key="133036">Radio phonographs</msg>
 <msg key="133133">Karaoke systems</msg>
 <msg key="133134">Megaphones</msg>
-<msg key="133445">Integrated circut IC chip recorder</msg>
+<msg key="133445">Integrated circuit IC chip recorder</msg>
 <msg key="134786">Digital voice recorders</msg>
 <msg key="134868">Minidisc players or recorders</msg>
 <msg key="135794">Magnetic storage media erasers</msg>
