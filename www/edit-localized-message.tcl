@@ -49,7 +49,7 @@ ad_form -name message -form {
         {label "Message Key"}
         {value "$package_key.$message_key"}
     }
-} 
+}
 
 if { ![string equal $default_locale $current_locale] } {
     ad_form -extend -name message -form {
@@ -58,7 +58,7 @@ if { ![string equal $default_locale $current_locale] } {
         }
     }
 }
-    
+
 ad_form -extend -name message -form {
     {message:text(textarea)
         {label "$locale_label Message"} 
@@ -103,7 +103,7 @@ ad_form -extend -name message -form {
     if { [exists_and_not_null message] } {
         set message $message
     } else {
-	set message $original_message
+        set message $original_message
     }
 
 
@@ -135,9 +135,9 @@ ad_form -extend -name message -form {
                                      where  lm2.package_key = :package_key
                                      and    lm2.message_key = :message_key
                                      and    lm2.locale = :current_locale
-                                     )                                     
+                                     )
             }
-        } 
+        }
 
         set first_translated_message "<ul> <li>First translated by [acs_community_member_link -user_id $creation_user_id -label $creation_user_name] on $creation_date</li></ul>"
     } else {
@@ -148,7 +148,7 @@ ad_form -extend -name message -form {
     # Register message via acs-lang
     lang::message::register -comment $comment $locale $package_key $message_key $message
 
-    if { [empty_string_p $return_url] } {
+    if { $return_url eq "" } {
         set return_url "[ad_conn url]?[export_vars { locale package_key message_key show }]"
     }
     ad_returnredirect $return_url

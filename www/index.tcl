@@ -12,7 +12,7 @@ ad_page_contract {
 set default_locale en_US
 
 set locale [lang::user::locale]
-if { [empty_string_p $locale] } {
+if { $locale eq "" } {
     set locale $default_locale
 }
 
@@ -54,19 +54,19 @@ if { ![string equal $default_locale $current_locale] } {
 }
 
 ad_form -extend -name search -form {
-    {q:text 
+    {q:text
         {label "Search for"}
     }
 } -on_request {
     # locale will be set now
-} 
+}
 
 if { [exists_and_not_null search_locale] && [exists_and_not_null q] } {
     set submit_p 1
 
     set search_string "%$q%"
 
-    db_multirow -extend { 
+    db_multirow -extend {
         package_url
         edit_url
         message_key_pretty
@@ -86,5 +86,3 @@ if { [exists_and_not_null search_locale] && [exists_and_not_null q] } {
         }
     }
 }
-
-
