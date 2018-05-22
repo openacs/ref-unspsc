@@ -7,7 +7,7 @@
 Search <formwidget id="search_locale"> for <formwidget id="q"> <input type="submit" value="Search">
 </formtemplate>
 
-<if @submit_p@ true>
+<if @submit_p;literal@ true>
   <h2>Search Results</h2>
 
   <if @other_search_url@ not nil>
@@ -15,8 +15,8 @@ Search <formwidget id="search_locale"> for <formwidget id="q"> <input type="subm
       <li><a href="@other_search_url@">Search for '@q@' in @other_locale@</a></li>
     </ul>
   </if>
-   
-  <if @messages:rowcount@ gt 0>        
+
+  <if @messages:rowcount@ gt 0>
     <table cellpadding="0" cellspacing="0" border="0">
       <tr>
         <td style="background: #CCCCCC">
